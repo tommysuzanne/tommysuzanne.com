@@ -20,7 +20,7 @@ Code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
 
 ## Aperçu
 
-![Aperçu du site](assets/blog/mission-hero.svg)
+![Aperçu du site](preview.gif)
 
 ## À propos
 

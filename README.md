@@ -1,6 +1,12 @@
-C'est le code source de mon site personnel construit en **HTML/CSS/JS** (sans build) et publié sur https://tommysuzanne.com.
+# Site web personnel de Tommy Suzanne
 
-# tommysuzanne.com
+C'est le code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
+
+**Copywriting (FR)** : Entredonneur • Je fais ce qui doit être fait, pas seulement ce dont j’ai envie. Je le fais en pensant à ceux que j’aime et c’est ainsi que je crée des choses qui servent plus grand que moi.
+
+**Copywriting (EN)** : giver‑preneur • I do what must be done—not only what I feel like doing. I do it with the people I love in mind, and that’s how I build things that serve something greater than me.
+
+**Tags** : `html` `css` `javascript` `static-site` `bilingual` `seo`
 
 - Site en ligne : https://tommysuzanne.com
 - Pages principales : `index.html` (FR) + `en/` (EN)
@@ -15,15 +21,30 @@ Je suis **Tommy Suzanne** — *Entredonneur* : je fais ce qui doit être fait (p
 
 ## Structure du site
 
-- `index.html` : page d’accueil (FR)
-- `en/` : pages en anglais (dont RSS)
-- `blog/` : pages d’articles en français
-- `en/blog/` : pages d’articles en anglais
-- `assets/` : images et médias
-- `styles-modern.css`, `styles.css`, `liquid-glass.css`, `institutional.css`, `apple-ux-improvements.css` : styles
-- `script.js`, `theme-bootstrap.js`, `quotes.js`, `timeline-data.js` : logique front (thème, langue, interactions, contenu)
-- `rss.xml`, `en/rss.xml`, `sitemap.xml`, `robots.txt` : SEO / syndication
-- `.htaccess` : config Apache (ex. `ErrorDocument 404`)
+```text
+.
+├── index.html                 # Accueil (FR)
+├── 404.html                   # Page 404
+├── blog/                      # Articles FR (pages HTML)
+├── en/                        # Contenu EN
+│   ├── blog/                  # Articles EN (pages HTML)
+│   └── rss.xml                # RSS (EN)
+├── assets/                    # Assets statiques
+│   └── blog/                  # Illustrations des articles (SVG)
+├── styles-modern.css          # Styles principaux
+├── styles.css                 # Styles legacy / compat
+├── liquid-glass.css           # Effets visuels (glass)
+├── institutional.css          # Styles “institutionnels”
+├── apple-ux-improvements.css  # Ajustements UX
+├── script.js                  # Interactions, langue, UX
+├── theme-bootstrap.js         # Bootstrapping thème
+├── quotes.js                  # Citations / contenu
+├── timeline-data.js           # Données timeline
+├── rss.xml                    # RSS (FR)
+├── sitemap.xml                # Sitemap
+├── robots.txt                 # Robots
+└── .htaccess                  # Apache (ex. ErrorDocument 404)
+```
 
 ## Développement local
 

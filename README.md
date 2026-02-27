@@ -5,7 +5,7 @@
 
 Code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
 
-- 🌐 Démo : https://tommysuzanne.com
+- 🌐 Site : https://tommysuzanne.com
 - 📰 RSS : `rss.xml` (FR) et `en/rss.xml` (EN)
 
 ## Sommaire
@@ -102,4 +102,7 @@ Note : `.htaccess` est utile sur Apache (ex. `ErrorDocument 404`), mais n’est 
 
 ## Licence
 
-Sauf mention contraire : © Tommy Suzanne — tous droits réservés.
+Le dépôt est en **double licence** :
+
+- **Code** (structure, CSS, JS, composants réutilisables) : **MIT** — voir `LICENSE`.
+- **Contenu** (textes/copywriting, articles, images/illustrations) : © Tommy Suzanne — **tous droits réservés** — voir `CONTENT_LICENSE.md`.

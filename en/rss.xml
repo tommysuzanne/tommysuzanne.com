@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tommy Suzanne — Blog (EN)</title>
+    <link>https://tommysuzanne.com/</link>
+    <description>English blog posts by Tommy Suzanne.</description>
+    <language>en-us</language>
+    <atom:link href="https://tommysuzanne.com/en/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 GMT</lastBuildDate>
+    <ttl>1440</ttl>
+
+    <item>
+      <title>Transmute Sexual Energy in Service of Your Goals</title>
+      <link>https://tommysuzanne.com/en/blog/transmuter-l-energie-sexuelle.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/en/blog/transmuter-l-energie-sexuelle.html</guid>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 GMT</pubDate>
+      <description><![CDATA[What if desire became your engine? Transmute sexual energy into creativity, focus, and action, guided by a lunar rhythm.]]></description>
+    </item>
+
+    <item>
+      <title>Discover Your Mission: Write Your Story and Name the Essential</title>
+      <link>https://tommysuzanne.com/en/blog/discover-your-mission.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/en/blog/discover-your-mission.html</guid>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 GMT</pubDate>
+      <description><![CDATA[A 30‑day compass: 7 questions + 3 exercises to write your story, surface your strengths, and name what matters.]]></description>
+    </item>
+
+    <item>
+      <title>Manifest Your Desires: From Intention to Reality</title>
+      <link>https://tommysuzanne.com/en/blog/le-secret-pour-manifester-tous-vos-desirs.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/en/blog/le-secret-pour-manifester-tous-vos-desirs.html</guid>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 GMT</pubDate>
+      <description><![CDATA[You don’t need more willpower: clarify the intention, align emotion with action, and move from desire to reality.]]></description>
+    </item>
+
+    <item>
+      <title>Quantum Acceleration: Tap Source Energy and Move Forward Every Day</title>
+      <link>https://tommysuzanne.com/en/blog/quantum-acceleration.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/en/blog/quantum-acceleration.html</guid>
+      <pubDate>Sun, 23 Feb 2014 00:00:00 GMT</pubDate>
+      <description><![CDATA[When adversity hits, convert it. A simple protocol (breathwork, reframing, daily rituals) to tap source‑energy and move forward.]]></description>
+    </item>
+  </channel>
+</rss>
+

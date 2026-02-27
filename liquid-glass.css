@@ -1,0 +1,506 @@
+/* ================================
+   LIQUID GLASS DESIGN SYSTEM
+   macOS 26 Inspired UI Components
+   ================================ */
+
+/* ================================
+   CSS VARIABLES - Liquid Glass
+   ================================ */
+:root {
+    /* Light Mode - Liquid Glass */
+    --liquid-bg: rgba(255, 255, 255, 0.72);
+    --liquid-bg-secondary: rgba(245, 245, 247, 0.68);
+    --liquid-border: rgba(255, 255, 255, 0.3);
+    --liquid-shadow-light: rgba(255, 255, 255, 0.5);
+    --liquid-shadow-dark: rgba(0, 0, 0, 0.05);
+    --liquid-blur: 20px;
+    --liquid-saturate: 180%;
+    
+    /* macOS Traffic Lights */
+    --macos-red: #FF5F57;
+    --macos-red-hover: #E0443E;
+    --macos-yellow: #FFBD2E;
+    --macos-yellow-hover: #DEA123;
+    --macos-green: #28CA42;
+    --macos-green-hover: #1AAB29;
+    
+    /* Toggle Glass Effects */
+    --toggle-bg: rgba(255, 255, 255, 0.25);
+    --toggle-active: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+    --toggle-knob: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+    --toggle-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode - Liquid Glass */
+:root[data-theme="dark"] {
+    --liquid-bg: rgba(30, 30, 30, 0.72);
+    --liquid-bg-secondary: rgba(44, 44, 46, 0.68);
+    --liquid-border: rgba(255, 255, 255, 0.1);
+    --liquid-shadow-light: rgba(255, 255, 255, 0.05);
+    --liquid-shadow-dark: rgba(0, 0, 0, 0.3);
+    --toggle-bg: rgba(255, 255, 255, 0.1);
+    --toggle-active: linear-gradient(135deg, #0A84FF 0%, #0060DF 100%);
+    --toggle-knob: linear-gradient(135deg, #f5f5f7 0%, #e5e5e7 100%);
+}
+
+/* ================================
+   TERMINAL WINDOW - macOS Style
+   ================================ */
+
+/* Main Terminal Window */
+.terminal,
+.loading-terminal {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 0 0.5px rgba(0, 0, 0, 0.1),
+        0 20px 50px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--liquid-border);
+}
+
+:root[data-theme="dark"] .terminal,
+:root[data-theme="dark"] .loading-terminal {
+    box-shadow: 
+        0 0 0 0.5px rgba(255, 255, 255, 0.1),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Terminal Header with Liquid Glass */
+.terminal-header,
+.loading-terminal-header {
+    background: var(--liquid-bg);
+    backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+    -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+    border-bottom: 0.5px solid var(--liquid-border);
+    box-shadow: 
+        0 1px 0 var(--liquid-shadow-light) inset,
+        0 0 0 0.5px var(--liquid-shadow-dark);
+    padding: 0;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+/* Remove old border styles */
+:root[data-theme="dark"] .loading-terminal-header,
+:root[data-theme="dark"] .terminal-header {
+    border-bottom: 0.5px solid var(--liquid-border);
+    box-shadow: 
+        0 1px 0 var(--liquid-shadow-light) inset,
+        0 0 0 0.5px var(--liquid-shadow-dark);
+}
+
+/* ================================
+   macOS TRAFFIC LIGHTS
+   ================================ */
+
+.terminal-controls,
+.loading-terminal-controls {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Individual Traffic Light Buttons */
+.terminal-controls .control,
+.loading-terminal-controls .control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(0, 0, 0, 0.12);
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Light mode borders */
+:root:not([data-theme="dark"]) .control {
+    border: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode borders */
+:root[data-theme="dark"] .control {
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Traffic Light Colors */
+.control.close {
+    background: var(--macos-red);
+}
+
+.control.minimize {
+    background: var(--macos-yellow);
+}
+
+.control.maximize {
+    background: var(--macos-green);
+}
+
+/* Hover Effects with Symbols */
+.terminal-header:hover .control::before,
+.loading-terminal-header:hover .control::before {
+    opacity: 1;
+}
+
+.control::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-size: 9px;
+    font-weight: 900; /* Maximum weight for thick symbols */
+    color: rgba(0, 0, 0, 0.7); /* Even darker for maximum visibility */
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.control.close::before {
+    content: '×';
+    font-size: 10px; /* Reduced by 1px */
+    margin-top: -0.5px; /* Lowered by 1px */
+    margin-left: 0.5px; /* Shifted 0.5px to the right */
+}
+
+.control.minimize::before {
+    content: '−';
+    font-size: 10px; /* Slightly reduced */
+    margin-top: -0.5px; /* Fine adjustment upward */
+    margin-left: 0.5px; /* Shifted 0.5px to the right */
+}
+
+.control.maximize::before {
+    content: '+';
+    font-size: 10px; /* Slightly reduced */
+    margin-top: -0.5px; /* Fine adjustment upward */
+    margin-left: 0.5px; /* Shifted 0.5px to the right */
+}
+
+/* Active states */
+.control:active {
+    transform: scale(0.95);
+}
+
+/* ================================
+   LIQUID GLASS TOGGLES
+   ================================ */
+
+/* Language & Theme Switches with Liquid Glass */
+.lang-slider,
+.slider {
+    background: var(--toggle-bg);
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    border: 0.5px solid var(--liquid-border);
+    box-shadow: 
+        inset 0 1px 4px rgba(0, 0, 0, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Active state gradient */
+.lang-switch input:checked ~ .lang-slider,
+.theme-switch input:checked ~ .slider {
+    background: var(--toggle-active);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Toggle Knob with Glass Effect */
+.lang-slider::before,
+.slider::before {
+    background: var(--toggle-knob);
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Liquid animation on toggle */
+@keyframes liquidRipple {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+.lang-slider::after,
+.slider::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lang-switch input:checked ~ .lang-slider::after,
+.theme-switch input:checked ~ .slider::after {
+    animation: liquidRipple 0.6s ease-out;
+}
+
+/* ================================
+   CONTENT BLOCKS - Glassmorphism
+   ================================ */
+
+.content-block {
+    background: var(--liquid-bg-secondary);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+    border: 0.5px solid var(--liquid-border);
+    border-radius: 12px;
+    box-shadow: 
+        0 1px 0 var(--liquid-shadow-light) inset,
+        0 8px 32px rgba(31, 38, 135, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect with glass distortion */
+.content-block::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.content-block:hover::before {
+    opacity: 1;
+}
+
+.content-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 1px 0 var(--liquid-shadow-light) inset,
+        0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+/* ================================
+   STAT & PERFORMANCE ITEMS
+   ================================ */
+
+.stat-item,
+.perf-item {
+    background: var(--liquid-bg);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 0.5px solid var(--liquid-border);
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.stat-item:hover,
+.perf-item:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+   LIQUID MICRO-INTERACTIONS
+   ================================ */
+
+/* Breathing effect */
+@keyframes liquidBreathe {
+    0%, 100% {
+        backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+    }
+    50% {
+        backdrop-filter: blur(calc(var(--liquid-blur) + 2px)) saturate(calc(var(--liquid-saturate) + 20%));
+    }
+}
+
+.breathing-glass {
+    animation: liquidBreathe 4s ease-in-out infinite;
+}
+
+/* Liquid hover ripple */
+.liquid-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.liquid-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.liquid-ripple:hover::after {
+    width: 300%;
+    height: 300%;
+}
+
+/* ================================
+   CONTACT ITEMS - Glass Cards
+   ================================ */
+
+.contact-item {
+    background: var(--liquid-bg);
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    border: 0.5px solid var(--liquid-border);
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 8px 24px rgba(0, 0, 0, 0.12);
+    background: var(--liquid-bg-secondary);
+}
+
+/* ================================
+   FILE LIST - Subtle Glass
+   ================================ */
+
+.file-list {
+    background: var(--liquid-bg);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border-radius: 8px;
+    padding: 12px;
+    border: 0.5px solid var(--liquid-border);
+}
+
+/* ================================
+   BUTTONS - Glass Style
+   ================================ */
+
+.btn-minimal {
+    background: var(--toggle-bg);
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    border: 0.5px solid var(--liquid-border);
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.btn-minimal:hover {
+    background: var(--liquid-bg-secondary);
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 0 1px 0 var(--liquid-shadow-light),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================ */
+
+/* Reduce blur on low-end devices */
+@media (max-width: 768px) {
+    :root {
+        --liquid-blur: 12px;
+        --liquid-saturate: 150%;
+    }
+    
+    /* Disable complex animations on mobile */
+    .liquid-ripple::after,
+    .content-block::before {
+        display: none;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ================================
+   SAFARI OPTIMIZATIONS
+   ================================ */
+
+/* Ensure backdrop-filter works in Safari */
+@supports (-webkit-backdrop-filter: blur(1px)) {
+    .terminal-header,
+    .loading-terminal-header,
+    .content-block,
+    .stat-item,
+    .perf-item,
+    .contact-item {
+        -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+    }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+    .terminal-header,
+    .loading-terminal-header {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    :root[data-theme="dark"] .terminal-header,
+    :root[data-theme="dark"] .loading-terminal-header {
+        background: rgba(30, 30, 30, 0.95);
+    }
+    
+    .content-block,
+    .stat-item,
+    .perf-item,
+    .contact-item {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    :root[data-theme="dark"] .content-block,
+    :root[data-theme="dark"] .stat-item,
+    :root[data-theme="dark"] .perf-item,
+    :root[data-theme="dark"] .contact-item {
+        background: rgba(30, 30, 30, 0.9);
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="/theme-bootstrap.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 – Page introuvable | Tommy Suzanne</title>
+    <meta name="description" content="La ressource demandée est introuvable. Retournez vers l’espace principal Tommy Suzanne.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="/styles-modern.css">
+    <link rel="stylesheet" href="/liquid-glass.css">
+    <link rel="stylesheet" href="/institutional.css">
+    <link rel="stylesheet" href="/apple-ux-improvements.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <meta name="theme-color" content="#f5f5f7">
+</head>
+<body>
+    <div class="controls-container">
+        <div class="lang-switch-wrapper">
+            <label class="lang-switch" for="lang-checkbox">
+                <input type="checkbox" id="lang-checkbox" data-lang-toggle aria-label="Basculer la langue" />
+                <div class="lang-slider">
+                    <span class="lang-indicator fr-indicator">fr</span>
+                    <span class="lang-indicator en-indicator">en</span>
+                </div>
+            </label>
+        </div>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="theme-checkbox">
+                <input type="checkbox" id="theme-checkbox" data-theme-toggle aria-label="Activer le thème sombre" />
+                <div class="slider">
+                    <span class="theme-indicator sun-indicator">☼</span>
+                    <span class="theme-indicator moon-indicator">☾</span>
+                </div>
+            </label>
+        </div>
+    </div>
+    <main class="terminal terminal-error">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title" data-copy-fr="admin@tommysuzanne.com ~ /404" data-copy-en="admin@tommysuzanne.com ~ /404">admin@tommysuzanne.com ~ /404</div>
+        </div>
+        <section class="terminal-body error-terminal-body">
+            <div class="ascii-logo" aria-hidden="true">
+                <svg viewBox="0 0 100 100" width="96" height="96" aria-label="Aurora">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="output error-summary">
+                <p class="command" data-copy-fr="$ open <span class='error-path' data-path></span>" data-copy-en="$ open <span class='error-path' data-path></span>">$ open <span class="error-path" data-path></span></p>
+                <h1 class="glitch" data-copy-fr="Page introuvable" data-copy-en="Page not found">Page introuvable</h1>
+                <p class="subtitle" data-copy-fr="Cette route n’existe pas dans l’univers Aurora. Utilisez les raccourcis ci-dessous pour revenir sur une trajectoire connue." data-copy-en="This route does not exist in the Aurora universe. Use the shortcuts below to get back on a known trajectory.">Cette route n’existe pas dans l’univers Aurora. Utilisez les raccourcis ci-dessous pour revenir sur une trajectoire connue.</p>
+            </div>
+            <div class="output error-signal">
+                <span class="error-code-badge" data-copy-fr="erreur 404" data-copy-en="error 404">erreur 404</span>
+                <span data-copy-fr="Requête non résolue" data-copy-en="Request unresolved">Requête non résolue</span>
+                <span data-copy-fr="Chemin&nbsp;:&nbsp;<span class='error-path' data-path></span>" data-copy-en="Path:&nbsp;<span class='error-path' data-path></span>">Chemin&nbsp;:&nbsp;<span class="error-path" data-path></span></span>
+            </div>
+            <div class="output error-actions">
+                <a class="apple-pill-button error-nav-button error-nav-button--home" href="/">
+                    <span class="error-nav-arrow error-nav-arrow--left" aria-hidden="true">←</span>
+                    <span class="button-text" data-copy-fr="RETOUR À L’ACCUEIL" data-copy-en="RETURN HOME">RETOUR À L’ACCUEIL</span>
+                </a>
+                <a class="apple-pill-button error-nav-button error-nav-button--blog" href="/#blog">
+                    <span class="button-text" data-copy-fr="LIRE LE BLOG" data-copy-en="VISIT THE BLOG">LIRE LE BLOG</span>
+                    <span class="error-nav-arrow error-nav-arrow--right" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="/error-screen.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/* ================================
+   INSTITUTIONAL DESIGN UPDATES
+   Professional Corporate Styling
+   ================================ */
+
+/* ================================
+   TYPOGRAPHY - Corporate Font Stack
+   ================================ */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap'); */
+
+:root {
+    /* Using original terminal fonts */
+    --corporate-font: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --mono-font: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+    
+    /* Apple Blue Color Palette */
+    --corporate-blue: #007AFF;
+    --corporate-blue-light: #0A84FF;
+    --corporate-gray: #6B7280;
+    --corporate-dark: #111827;
+    --corporate-success: #10B981;
+    --corporate-warning: #F59E0B;
+    --corporate-danger: #EF4444;
+}
+
+/* ================================
+   REDUCED GLITCH EFFECTS
+   ================================ */
+.glitch {
+    animation: none !important;
+    text-shadow: none !important;
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    display: none !important;
+}
+
+/* Simple underline effect instead of glitch */
+.glitch {
+    color: #000000;
+    font-weight: 700;
+}
+
+:root[data-theme="dark"] .glitch {
+    color: #FFFFFF;
+}
+
+/* ================================
+   CORPORATE TYPOGRAPHY
+   ================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--corporate-font);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+p {
+    font-family: var(--corporate-font);
+    line-height: 1.6;
+    color: var(--corporate-gray);
+}
+
+:root[data-theme="dark"] p {
+    color: #9CA3AF;
+}
+
+/* ================================
+   PHILOSOPHY ICONS STYLING
+   ================================ */
+.philosophy-item .icon {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1rem;
+}
+
+.philosophy-item .icon svg {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+/* ================================
+   PROFESSIONAL CONTENT BLOCKS
+   ================================ */
+.content-block {
+    border-radius: 12px;
+    padding: clamp(14px, 4vw, 32px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: var(--corporate-font);
+}
+
+:root[data-theme="dark"] .content-block {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ================================
+   BLOCKQUOTE STYLING
+   ================================ */
+blockquote {
+    border: none;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--corporate-dark);
+    background: #F9F9F9;
+    border-radius: 10px;
+}
+
+:root[data-theme="dark"] blockquote {
+    color: #E5E7EB;
+    background: #2A2A2A;
+}
+
+/* ================================
+   PROFESSIONAL BUTTONS
+   ================================ */
+.btn-minimal {
+    font-family: var(--corporate-font);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Button styles removed - using original terminal style from styles-modern.css */
+
+/* ================================
+   STATS WITH DATA VIZ
+   ================================ */
+.stat-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--corporate-blue) 0%, var(--corporate-blue-light) 100%);
+    animation: slideProgress 2s ease-out;
+}
+
+@keyframes slideProgress {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.stat-value {
+    font-family: var(--corporate-font);
+    font-weight: 700;
+    color: var(--corporate-dark);
+}
+
+:root[data-theme="dark"] .stat-value {
+    color: white;
+}
+
+/* ================================
+   PERFORMANCE METRICS STYLING
+   ================================ */
+.perf-item {
+    background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+    border: 1px solid #E5E7EB;
+}
+
+:root[data-theme="dark"] .perf-item {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    border: 1px solid #374151;
+}
+
+.perf-value.positive {
+    color: var(--corporate-success) !important;
+    font-weight: 700;
+}
+
+/* ================================
+   TERMINAL MODERNIZATION
+   ================================ */
+.terminal-header {
+    font-family: var(--corporate-font);
+}
+
+.terminal-title {
+    font-weight: 500;
+    color: var(--corporate-gray);
+}
+
+.command {
+    font-family: var(--mono-font);
+    color: var(--corporate-blue);
+    font-weight: 500;
+}
+
+/* ================================
+   SMOOTHER ANIMATIONS
+   ================================ */
+* {
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+}
+
+.typewriter {
+    animation: none;
+    opacity: 1;
+}
+
+/* ================================
+   CONTACT CARDS PROFESSIONAL
+   ================================ */
+.contact-item {
+    background: white;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+:root[data-theme="dark"] .contact-item {
+    background: #1F2937;
+    border: 1px solid #374151;
+}
+
+.contact-item:hover {
+    border-color: var(--corporate-blue);
+    box-shadow: 0 4px 12px rgba(0, 81, 213, 0.1);
+}
+
+.contact-item code {
+    color: var(--corporate-blue);
+    font-family: var(--mono-font);
+}
+
+/* ================================
+   FILE LIST MODERNIZATION
+   ================================ */
+.file-list {
+    font-family: var(--mono-font);
+    background: transparent;
+}
+
+.file-list a {
+    color: var(--corporate-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.file-list a:hover {
+    color: var(--corporate-blue-light);
+    text-decoration: underline;
+}
+
+/* ================================
+   MOTTO STYLING
+   ================================ */
+.motto {
+    font-family: var(--corporate-font);
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--corporate-dark);
+    opacity: 0.9;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+:root[data-theme="dark"] .motto {
+    color: #E5E7EB;
+}
+
+/* ================================
+   HIGHLIGHT STYLING
+   ================================ */
+.highlight {
+    color: var(--corporate-blue);
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--corporate-blue), var(--corporate-blue-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ================================
+   RESPONSIVE PROFESSIONAL
+   ================================ */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .philosophy-item .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ================================
+   SUBTLE HOVER STATES
+   ================================ */
+.philosophy-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   CLEAN FOCUS STATES
+   ================================ */
+:focus-visible {
+    outline: 2px solid var(--corporate-blue);
+    outline-offset: 2px;
+}
+
+/* ================================
+   LOADING OPTIMIZATION
+   ================================ */
+.loading-screen {
+    font-family: var(--corporate-font);
+}
+
+.loading-terminal-body {
+    font-family: var(--mono-font);
+}
+
+/* ================================
+   DATA VISUALIZATION PLACEHOLDER
+   ================================ */
+.data-viz {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--corporate-gray);
+    font-family: var(--corporate-font);
+    font-weight: 500;
+}
+
+:root[data-theme="dark"] .data-viz {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    color: #6B7280;
+}

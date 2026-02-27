@@ -1,0 +1,39 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quantumBg" x1="160" y1="40" x2="820" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7F9FF"/>
+      <stop offset="50%" stop-color="#EAF8FF"/>
+      <stop offset="100%" stop-color="#FFEAF4"/>
+    </linearGradient>
+    <radialGradient id="quantumGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(480 260) scale(380 240)">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#DAF2FF" stop-opacity="0.15"/>
+    </radialGradient>
+    <linearGradient id="quantumWave" x1="200" y1="180" x2="760" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9EE8FF"/>
+      <stop offset="50%" stop-color="#FFC5F5"/>
+      <stop offset="100%" stop-color="#FFD9BA"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="8" fill="url(#quantumBg)"/>
+  <ellipse cx="480" cy="270" rx="360" ry="240" fill="url(#quantumGlow)"/>
+  <g opacity="0.45" stroke="url(#quantumWave)" stroke-width="28" stroke-linecap="round">
+    <path d="M200 320C260 260 320 220 380 220C440 220 500 260 560 300C620 340 680 380 740 340"/>
+    <path d="M220 220C280 190 340 180 400 210C460 240 520 320 580 330C640 340 700 300 760 240" opacity="0.6"/>
+  </g>
+  <g opacity="0.75">
+    <circle cx="320" cy="150" r="22" fill="#FDE6FF"/>
+    <circle cx="640" cy="150" r="18" fill="#DAF4FF"/>
+    <circle cx="540" cy="420" r="26" fill="#FFE2D2"/>
+    <circle cx="380" cy="400" r="18" fill="#E2FFE9"/>
+    <circle cx="760" cy="300" r="20" fill="#FFF2D8"/>
+  </g>
+  <g opacity="0.25" stroke="#9EE8FF" stroke-width="2">
+    <path d="M260 180C340 220 420 300 520 320C620 340 700 300 760 240" stroke-dasharray="12 16"/>
+    <path d="M220 280C300 340 400 380 520 360C640 340 720 260 780 200" stroke-dasharray="14 18"/>
+  </g>
+  <circle cx="480" cy="260" r="48" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="480" cy="260" r="26" fill="#BEDFFF"/>
+  <path d="M480 212C504 224 520 244 520 268" stroke="#FFC0EB" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <path d="M440 312C480 328 520 328 560 312" stroke="#CFF4FF" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+</svg>

@@ -1,0 +1,21 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon\r\r
+
+# Thumbnails
+._*
+
+# Files that might contain secrets
+.env
+.env.*
+
+# Editor/OS noise
+.vscode/
+.idea/
+
+# Dependency folders (in case you add tooling later)
+node_modules/
+

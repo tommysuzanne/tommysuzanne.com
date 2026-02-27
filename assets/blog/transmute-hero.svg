@@ -1,0 +1,30 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(480 270) scale(420 260)">
+      <stop offset="0%" stop-color="#FFF5FB"/>
+      <stop offset="35%" stop-color="#FAD6FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C9B6FF" stop-opacity="0.2"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="160" y1="120" x2="780" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFB3C6"/>
+      <stop offset="50%" stop-color="#FFA8F6"/>
+      <stop offset="100%" stop-color="#9DE0FF"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F9C5FF" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="8" fill="url(#glow)"/>
+  <path d="M160 360C240 320 280 240 360 200C440 160 520 200 600 180C680 160 760 100 820 120" stroke="url(#wave)" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+  <path d="M180 260C240 240 300 200 360 220C420 240 460 300 520 320C580 340 660 320 760 220" stroke="url(#wave)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <g opacity="0.85">
+    <circle cx="300" cy="170" r="26" fill="url(#spark)"/>
+    <circle cx="660" cy="130" r="18" fill="url(#spark)"/>
+    <circle cx="520" cy="390" r="22" fill="url(#spark)"/>
+    <circle cx="760" cy="300" r="14" fill="url(#spark)"/>
+    <circle cx="420" cy="320" r="16" fill="url(#spark)"/>
+  </g>
+  <path d="M430 150C460 210 520 240 580 250" stroke="#FFE3FA" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M360 410C420 380 500 380 580 400" stroke="#D0F2FF" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+</svg>

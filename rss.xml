@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tommy Suzanne — Blog</title>
+    <link>https://tommysuzanne.com/</link>
+    <description>Articles du blog de Tommy Suzanne.</description>
+    <language>fr</language>
+    <atom:link href="https://tommysuzanne.com/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 GMT</lastBuildDate>
+    <ttl>1440</ttl>
+
+    <item>
+      <title>Transmuter l’énergie sexuelle au service de vos buts</title>
+      <link>https://tommysuzanne.com/blog/transmuter-l-energie-sexuelle.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/blog/transmuter-l-energie-sexuelle.html</guid>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 GMT</pubDate>
+      <description><![CDATA[Et si le désir devenait votre moteur ? Transmutez l’énergie sexuelle en créativité, focus et action, guidé par un rythme lunaire.]]></description>
+    </item>
+
+    <item>
+      <title>Découvrir sa mission : écrire son histoire et nommer l’essentiel</title>
+      <link>https://tommysuzanne.com/blog/decouvrir-sa-mission.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/blog/decouvrir-sa-mission.html</guid>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 GMT</pubDate>
+      <description><![CDATA[Une boussole en 30 jours : 7 questions + 3 exercices pour écrire votre histoire, révéler vos talents et nommer l’essentiel.]]></description>
+    </item>
+
+    <item>
+      <title>Manifester ses désirs : de l’intention à la réalité</title>
+      <link>https://tommysuzanne.com/blog/le-secret-pour-manifester-tous-vos-desirs.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/blog/le-secret-pour-manifester-tous-vos-desirs.html</guid>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 GMT</pubDate>
+      <description><![CDATA[Vous n’avez pas besoin de plus de volonté : clarifiez l’intention, alignez émotion et action, puis passez du désir à la réalité.]]></description>
+    </item>
+
+    <item>
+      <title>Accélération quantique : puiser l’énergie‑source et avancer chaque jour</title>
+      <link>https://tommysuzanne.com/blog/acceleration-quantique.html</link>
+      <guid isPermaLink="true">https://tommysuzanne.com/blog/acceleration-quantique.html</guid>
+      <pubDate>Sun, 23 Feb 2014 00:00:00 GMT</pubDate>
+      <description><![CDATA[Quand l’adversité frappe, convertissez‑la. Un protocole simple (respiration, recadrage, rituels quotidiens) pour puiser l’énergie‑source et avancer.]]></description>
+    </item>
+  </channel>
+</rss>

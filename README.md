@@ -1,7 +1,6 @@
 # Site web personnel de Tommy Suzanne
 
-[![Website](https://img.shields.io/badge/website-tommysuzanne.com-0b7285)](https://tommysuzanne.com)
-[![Static](https://img.shields.io/badge/site-static-495057)](#d%C3%A9marrer-en-local)
+[![Website](https://img.shields.io/badge/website-tommysuzanne.com-0b7285)](https://tommysuzanne.com) [![Static](https://img.shields.io/badge/site-static-495057)](#d%C3%A9marrer-en-local) [![Code License: MIT](https://img.shields.io/badge/code%20license-MIT-228be6)](LICENSE) [![Content: All rights reserved](https://img.shields.io/badge/content-all%20rights%20reserved-868e96)](CONTENT_LICENSE.md)
 
 Code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
 

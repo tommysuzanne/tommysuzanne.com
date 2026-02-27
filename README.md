@@ -2,12 +2,6 @@
 
 C'est le code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
 
-**Copywriting (FR)** : Entredonneur • Je fais ce qui doit être fait, pas seulement ce dont j’ai envie. Je le fais en pensant à ceux que j’aime et c’est ainsi que je crée des choses qui servent plus grand que moi.
-
-**Copywriting (EN)** : giver‑preneur • I do what must be done—not only what I feel like doing. I do it with the people I love in mind, and that’s how I build things that serve something greater than me.
-
-**Tags** : `html` `css` `javascript` `static-site` `bilingual` `seo`
-
 - Site en ligne : https://tommysuzanne.com
 - Pages principales : `index.html` (FR) + `en/` (EN)
 - Articles : `blog/` (FR) + `en/blog/` (EN)

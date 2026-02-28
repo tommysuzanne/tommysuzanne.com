@@ -23,7 +23,7 @@ Code source de mon site personnel construit en **HTML/CSS/JS** (sans build).
 
 ## À propos
 
-Je suis **Tommy Suzanne** — *Entredonneur* • Je choisis l’effort sur le désir, le devoir sur le confort. En pensant à mes Frères et à ceux que j'aime, je taille ma pierre pour édifier une œuvre qui me transcende.
+Je suis **Tommy Suzanne** — *Entredonneur* • Je contribue à édifier une œuvre qui me transcende.
 
 **Aurora** est le fil conducteur du site : l’idée d’un pont entre l’ancien monde et le nouveau, où la technologie et l’intelligence artificielle servent le vivant, l’éthique et la coopération — pour aller vers une économie d’abondance et des projets alignés avec l’évolution humaine.
 

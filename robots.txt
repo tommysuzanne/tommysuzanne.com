@@ -1,11 +1,27 @@
-# Robots.txt for tommysuzanne.com
-# Allow all crawlers
+# robots.txt for https://tommysuzanne.com/
+#
+# Note: directives like `Content-Signal: search=yes,ai-train=no` are not part of
+# the robots.txt standard and can make validators (including Lighthouse) fail.
+# If you want to discourage AI training, prefer explicit `User-agent` blocks
+# (keeps the file valid and does not affect search engine indexing).
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://tommysuzanne.com/sitemap.xml
+# AI training / scraping bots (best-effort; does not impact SEO crawlers)
+User-agent: GPTBot
+Disallow: /
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+Sitemap: https://tommysuzanne.com/sitemap.xml

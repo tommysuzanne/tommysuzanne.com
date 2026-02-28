@@ -516,13 +516,13 @@ class LanguageManager {
         const computedTitle = 'Tommy Suzanne';
         document.title = computedTitle;
 
-        // Update meta description
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-            metaDesc.content = this.currentLang === 'fr'
-                ? 'Tommy Suzanne — Entredonneur. Aurora construit l’âge d’or : technologie au service du vivant, IA éthique et coopération pour une économie d’abondance.'
-                : 'Tommy Suzanne — giver‑preneur. Aurora bridges the old and new world; AI and technology serving an abundant, ethical, cooperative economy.';
-        }
+	        // Update meta description
+	        const metaDesc = document.querySelector('meta[name="description"]');
+	        if (metaDesc) {
+	            metaDesc.content = this.currentLang === 'fr'
+	                ? 'Entredonneur • Je choisis l’effort sur le désir, le devoir sur le confort. En pensant à ceux que j’aime, je donne naissance à des choses qui servent quelque chose de plus grand que moi.'
+	                : 'Entredonneur • I choose effort over desire, duty over comfort. With the people I love in mind, I bring into being things that serve something greater than me.';
+	        }
 
         // Sync Open Graph tags with current language
         const ogTitle = document.querySelector('meta[property="og:title"]');

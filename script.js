@@ -517,12 +517,12 @@ class LanguageManager {
         document.title = computedTitle;
 
 	        // Update meta description
-	        const metaDesc = document.querySelector('meta[name="description"]');
-	        if (metaDesc) {
-	            metaDesc.content = this.currentLang === 'fr'
-	                ? 'Entredonneur • Je choisis l’effort sur le désir, le devoir sur le confort. En pensant à ceux que j’aime, je donne naissance à des choses qui servent quelque chose de plus grand que moi.'
-	                : 'Entredonneur • I choose effort over desire, duty over comfort. With the people I love in mind, I bring into being things that serve something greater than me.';
-	        }
+		        const metaDesc = document.querySelector('meta[name="description"]');
+		        if (metaDesc) {
+		            metaDesc.content = this.currentLang === 'fr'
+		                ? 'Entredonneur • Je choisis l’effort sur le désir, le devoir sur le confort. En pensant à mes Frères et à ceux que j\'aime, je taille ma pierre pour édifier une œuvre qui me transcende.'
+		                : 'Entredonneur • I choose effort over desire, duty over comfort. With my Brothers and those I love in mind, I shape my stone to build a work that transcends me.';
+		        }
 
         // Sync Open Graph tags with current language
         const ogTitle = document.querySelector('meta[property="og:title"]');

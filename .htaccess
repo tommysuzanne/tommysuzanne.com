@@ -57,7 +57,7 @@ Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), 
 # - <script type="application/ld+json"> inline blocks
 # - onload=... on <link rel="stylesheet"> in index.html
 # If you later remove inline JS/handlers, we can tighten by removing 'unsafe-inline'.
-Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; form-action 'none'; upgrade-insecure-requests"
+Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; script-src-elem 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; form-action 'none'; upgrade-insecure-requests"
 </IfModule>
 
 # ----------------------------------------------------------------------

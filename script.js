@@ -250,13 +250,37 @@ class SmoothScroll {
     init() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
+                const href = anchor.getAttribute('href');
+                if (!href || href === '#') {
+                    return;
+                }
+
                 e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
+
+                let target;
+                try {
+                    target = document.querySelector(href);
+                } catch (_) {
+                    target = null;
+                }
+
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    document.querySelectorAll('.terminal').forEach((terminal) => {
+                        terminal.scrollTop = 0;
+                        terminal.scrollLeft = 0;
                     });
+
+                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    const behavior = prefersReducedMotion ? 'auto' : 'smooth';
+                    const top = target.getBoundingClientRect().top + window.scrollY;
+
+                    try {
+                        history.pushState(null, '', href);
+                    } catch (_) {
+                        // ignore
+                    }
+
+                    window.scrollTo({ top, left: 0, behavior });
                 }
             });
         });
@@ -1218,12 +1242,28 @@ const initInteractiveTerminals = () => {
     });
 };
 
+const initTableOfContents = () => {
+    const tocElements = Array.from(document.querySelectorAll('details[data-toc]'));
+    if (tocElements.length === 0) {
+        return;
+    }
+
+    if (!window.matchMedia('(min-width: 640px)').matches) {
+        return;
+    }
+
+    tocElements.forEach((toc) => {
+        toc.open = true;
+    });
+};
+
 const initApp = () => {
     applyLiquidGlassEffects();
 
     languageManager = new LanguageManager();
     new ThemeManager();
     initInteractiveTerminals();
+    initTableOfContents();
 
     scheduleIdle(() => {
         if (document.querySelector('a[href^="#"]')) {
